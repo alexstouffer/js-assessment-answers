@@ -3,7 +3,16 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.arraysAnswers = {
 
   indexOf : function(arr, item) {
-
+      for(var i = 0; i < arr.length; i++){
+          var result = [];
+          if(arr[i] == item){
+              result.push(i);
+              return result;
+          } else if(i == arr.length){
+              return -1;
+          }
+      }
+      
   },
 
   sum : function(arr) {
