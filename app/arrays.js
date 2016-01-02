@@ -18,9 +18,12 @@ exports.arraysAnswers = {
     });
     return total;
   },
-  //Like indexOf(), we want to loop through the array until we find the value we want to remove. 
+  //Like indexOf(), we want to loop through the array until we find the value we want to remove. However, we can use Array.prototype.filter() to loop through an array. We already have an item parameter given to us, but we create the value parameter in the anonymous callback function to compare against the item. We return the value in var result, because the values are being placed into a new array, and that result is returned as a whole. Filter does not mutate the original array.
   remove : function(arr, item) {
-
+    var result = arr.filter(function(value){
+      return value !== item;
+    });
+    return result;
   },
 
   removeWithoutCopy : function(arr, item) {
