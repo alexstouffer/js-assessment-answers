@@ -57,20 +57,32 @@ exports.arraysAnswers = {
   },
 
   concat : function(arr1, arr2) {
-    var result = arr1 + arr2;
-    return result;
+    return arr1.concat(arr2);
   },
 
   insert : function(arr, item, index) {
-
+     arr.splice(index, 0, item);
+     return arr;
   },
 
   count : function(arr, item) {
-
+    var result = arr.filter(function(index){
+      if(index == item){
+        return index
+      }
+    })
+    return result.length;
   },
 
   duplicates : function(arr) {
-
+      arr.foreach(function(item){
+          var result = arr.filter(function(value){
+              if(value == item){
+                  return value;
+              }
+          });
+          return result;
+      })
   },
 
   square : function(arr) {
