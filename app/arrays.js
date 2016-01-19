@@ -98,11 +98,11 @@ exports.arraysAnswers = {
   },
 
   findAllOccurrences : function(arr, target) {
-    arr.sort();
-    var result = 0;
+    //This function wants us to return a list rather than a count of all occurances. The result array will list the index of each occurance
+    var result = [];
     for(var i = 0; i < arr.length; i++){
       if (target == arr[i]){
-        result++;
+        result.push(i);
       }
     }
     return result;
