@@ -75,21 +75,36 @@ exports.arraysAnswers = {
   },
 
   duplicates : function(arr) {
-      arr.foreach(function(item){
-          var result = arr.filter(function(value){
-              if(value == item){
-                  return value;
-              }
-          });
-          return result;
-      })
+  //I'll sort the array
+  arr.sort();
+  
+  //Then I create a placeholder array, and a for loop that checks two conditions. First, if the index value is equal to the previous value. Second, that the index value is not equal to the last value in the results array.
+    var results = [];
+    var previousValue;
+    for(var i = 0; i < arr.length; i++){
+      if(arr[i] == previousValue && arr[i] !== results[results.length - 1]){
+        results.push(arr[i]);
+      }
+      previousValue = arr[i];
+    }
+    return results;
   },
 
   square : function(arr) {
-
+    for (var i = 0; i < arr.length; i++){
+      arr[i] = arr[i] * arr[i];
+    }
+    return arr;
   },
 
   findAllOccurrences : function(arr, target) {
-
+    arr.sort();
+    var result = 0;
+    for(var i = 0; i < arr.length; i++){
+      if (target == arr[i]){
+        result++;
+      }
+    }
+    return result;
   }
 };
