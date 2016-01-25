@@ -8,6 +8,9 @@ exports.stringsAnswers = {
 
   },
   reverseString: function(str) {
-
+      var splitted = str.split('');
+      var reversed = splitted.reverse();
+      var joined = reversed.join('');
+      return joined;
   }
 };
