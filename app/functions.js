@@ -6,7 +6,7 @@ exports.functionsAnswers = {
   },
 
   speak : function(fn, obj) {
-      return fn(obj);
+      return fn.call(obj);
   },
 
   functionFunction : function(str) {
