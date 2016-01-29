@@ -10,7 +10,9 @@ exports.functionsAnswers = {
   },
 
   functionFunction : function(str) {
-
+        return function(str){
+            return str;
+        };
   },
 
   makeClosures : function(arr, fn) {
