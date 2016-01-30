@@ -10,9 +10,10 @@ exports.functionsAnswers = {
   },
 
   functionFunction : function(str) {
+        var param = str + ", ";
         return function(str){
-            return str;
-        };
+              return param + str;
+        }
   },
 
   makeClosures : function(arr, fn) {
