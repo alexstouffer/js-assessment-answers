@@ -10,14 +10,16 @@ exports.functionsAnswers = {
   },
 
   functionFunction : function(str) {
-        var param = str + ", ";
-        return function(str){
-              return param + str;
-        }
+      var param = str + ", ";
+      return function(str){
+            return param + str;
+      }
   },
 
   makeClosures : function(arr, fn) {
-
+    return arr.filter(function(index){
+      return fn(index);
+    });
   },
 
   partial : function(fn, str1, str2) {
