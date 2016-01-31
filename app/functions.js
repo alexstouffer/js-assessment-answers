@@ -17,9 +17,15 @@ exports.functionsAnswers = {
   },
 
   makeClosures : function(arr, fn) {
-    return arr.filter(function(index){
-      return fn(index);
-    });
+    var funcs = [];
+    //innerFunc will return a function where the code block will call fn parameter on each item in the array.
+    for (var i = 0; i < arr.length; i++){
+      var val = arr[i];
+      funcs.push(function() {
+        return fn(val);
+      });
+    }
+    return funcs;
   },
 
   partial : function(fn, str1, str2) {
