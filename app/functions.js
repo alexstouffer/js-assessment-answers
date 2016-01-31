@@ -19,12 +19,11 @@ exports.functionsAnswers = {
   makeClosures : function(arr, fn) {
     var funcs = [];
     //innerFunc will return a function where the code block will call fn parameter on each item in the array.
-    for (var i = 0; i < arr.length; i++){
-      var val = arr[i];
+    arr.forEach(function(item){
       funcs.push(function() {
-        return fn(val);
+        return fn(item);
       });
-    }
+    })
     return funcs;
   },
 
