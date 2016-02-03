@@ -28,9 +28,7 @@ exports.functionsAnswers = {
   },
 
   partial : function(fn, str1, str2) {
-      var x = fn.bind(null, str1);
-      var y = x.bind(null, str2);
-      return y;
+      return fn.bind(null, str1, str2);
   },
 
   useArguments : function() {
