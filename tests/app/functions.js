@@ -58,10 +58,10 @@ describe('functions', function() {
   });
 
   it('you should be able to use arguments', function () {
-    var a = Math.random();
-    var b = Math.random();
-    var c = Math.random();
-    var d = Math.random();
+    var a = 2;
+    var b = 3;
+    var c = 4;
+    var d = 5;
 
     expect(functionsAnswers.useArguments(a)).to.eql(a);
     expect(functionsAnswers.useArguments(a, b)).to.eql(a + b);
